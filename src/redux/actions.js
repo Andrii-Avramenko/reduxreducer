@@ -24,3 +24,10 @@ export const toggleTask = id => {
         payload: id
     }
 }
+
+export const updateFilter = value => {
+    return {
+        type: 'filters/updateFilter',
+        payload: value
+    }
+}
