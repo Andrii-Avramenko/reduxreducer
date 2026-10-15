@@ -8,11 +8,13 @@ export const StatusFilter = () => {
   const filter = useSelector(getStatusFilter);
   const dispatch = useDispatch()
   const handleFilterChange = (value) => dispatch(updateFilter(value));
+
+  console.log(filter === statusFilters.all)
   return (
-    <div>
+    <div className="flex gap-1">
       <Button
         selected={filter === statusFilters.all}
-        onClick={() => handleFilterChange("plain click")}
+        onClick={() => handleFilterChange(statusFilters.all)}
       >
         All
       </Button>

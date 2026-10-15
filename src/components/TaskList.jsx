@@ -20,7 +20,7 @@ export const TaskList = () => {
     const visibleTasks = getVisibleTasks(tasks, statusFilter)
 
     return (
-        <ul>
+        <ul className="m-0 p-0 list-none divide-y divide-[#2f2f37]">
             {visibleTasks.map(task => (
                 <li key={task.id}>
                     <Task task={task} />

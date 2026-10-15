@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux"
 import { addTask } from "../redux/actions"
+import { Button } from "./Button"
 
 export const TaskForm = () => {
     const dispatch = useDispatch()
@@ -12,9 +13,9 @@ export const TaskForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="text" placeholder="Enter task text..." />
-            <button type="submit">Add Task</button>
+        <form onSubmit={handleSubmit} className="flex gap-1">
+            <input type="text" name="text" placeholder="Enter task text..." className="grow p-2 rounded outline-1 focus:outline-[#1976d2]"/>
+            <Button type="submit">Add Task</Button>
         </form>
     )
 }
